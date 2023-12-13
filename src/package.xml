@@ -11,6 +11,7 @@
         <members>qsyd_ContentDocumentTriggerHandler</members>
         <members>qsyd_ContentDocumentTriggerHandlerTest</members>
         <members>qsyd_File</members>
+        <members>qsyd_FileExplorerCommon</members>
         <members>qsyd_FileList</members>
         <members>qsyd_Folder</members>
         <members>qsyd_FolderList</members>
