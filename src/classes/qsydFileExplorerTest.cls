@@ -194,9 +194,9 @@ global with sharing class qsydFileExplorerTest {
     @IsTest
     private static void given_fileSetToPrivateOnRecords_when_fileRetreieved_success() {
         List<FileExplorerFile__c> fileExplorerFileList;
-
+        Test.startTest();
         setupTestData();
-
+        Test.stopTest();
         System.runAs(standardUser) {
                 fileExplorerFileList = fileItemList
                         .retrieve(a.Id)
