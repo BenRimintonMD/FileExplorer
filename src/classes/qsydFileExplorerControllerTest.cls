@@ -52,7 +52,7 @@ global with sharing class qsydFileExplorerControllerTest {
         if (cdlList.size() > 0) {
             contentDocumentId = cdlList[0].ContentDocumentId;
         }
-        List<ContentVersion> expectedCV = [SELECT Id, VersionNumber, ReasonForChange, LastModifiedDate FROM ContentVersion WHERE Title = 'Penguins' AND PathOnClient = 'Penguins.ppt'];
+        List<ContentVersion> expectedCV = [SELECT Id, VersionNumber, ReasonForChange, LastModifiedDate FROM ContentVersion WHERE Title = 'Penguins' AND PathOnClient = 'Penguins.ppt' ORDER BY VersionNumber DESC];
 
         System.assertEquals(expectedCV[0].Id, ((ContentVersion) JSON.deserialize(qsydFileExplorerController.getLatestContentVersion(contentDocumentId), ContentVersion.class)).Id);
         Test.stopTest();
